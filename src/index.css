@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-math {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Blackboard grid texture */
+.math-board-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Yellow soft glow effect */
+.glow-yellow {
+  box-shadow: 0 0 25px -4px rgba(250, 204, 21, 0.45);
+}
+
+.glow-yellow-sm {
+  box-shadow: 0 0 15px -2px rgba(250, 204, 21, 0.35);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
+}
+
+/* Realistic burning flame effect */
+.glow-flame {
+  box-shadow: 0 0 35px 8px rgba(249, 115, 22, 0.85), 0 0 70px 20px rgba(239, 68, 68, 0.6), inset 0 0 20px rgba(251, 191, 36, 0.7);
+  animation: flameFlicker 0.7s infinite alternate ease-in-out;
+}
+
+.text-glow-flame {
+  text-shadow: 0 0 10px #fef08a, 0 0 22px #f97316, 0 0 38px #ef4444, 0 0 55px #dc2626;
+}
+
+@keyframes flameFlicker {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.8)) brightness(1);
+    transform: scale(1.02) rotate(-0.5deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 22px rgba(239, 68, 68, 1)) brightness(1.25);
+    transform: scale(1.08) rotate(0.8deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(251, 146, 60, 0.9)) brightness(1.15);
+    transform: scale(1.05) rotate(-0.4deg);
+  }
+}
+
+/* Spark rising effect when operation burns */
+@keyframes sparkFly {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.3);
+  }
+}
+
+.animate-spark {
+  animation: sparkFly 1s infinite ease-out;
+}
+
+/* Smooth custom scrollbars */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.4);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 191, 36, 0.7);
+}

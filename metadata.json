@@ -1,0 +1,6 @@
+{
+  "name": "Matematik Amallar Tartibi Animatsiyasi",
+  "description": "Matematik ifodadagi amallar tartibini (qavs, ko'paytirish, bo'lish, qo'shish, ayirish) bosqichma-bosqich animatsiyali professional ta'limiy video shaklida tushuntiruvchi interaktiv tizim.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
